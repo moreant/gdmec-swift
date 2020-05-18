@@ -24,6 +24,22 @@ class VistorView: UIView {
         return lable
     }()
     
+    public lazy var registerButton:UIButton={
+       let button=UIButton()
+        button.setTitle("注册", for: UIControlState.normal)
+        button.setTitleColor(UIColor.orange, for: UIControlState.normal)
+        button.setBackgroundImage(UIImage(named:"common_button_white_disable"), for: UIControlState.normal)
+        return button
+    }()
+    
+    public lazy var loginButton:UIButton={
+        let button=UIButton()
+        button.setTitle("登录", for: UIControlState.normal)
+        button.setTitleColor(UIColor.orange, for: UIControlState.normal)
+        button.setBackgroundImage(UIImage(named:"common_button_white_disable"), for: UIControlState.normal)
+        return button
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
@@ -51,6 +67,8 @@ extension VistorView
         addSubview(iconView)
         addSubview(homeIconView)
         addSubview(messageLable)
+        addSubview(registerButton)
+        addSubview(loginButton)
         for v in subviews
         {
             v.translatesAutoresizingMaskIntoConstraints=false
@@ -65,6 +83,17 @@ extension VistorView
         addConstraint(NSLayoutConstraint(item: messageLable, attribute: .centerY, relatedBy: .equal, toItem: iconView, attribute: .bottom, multiplier: 1.0, constant: 16))
         addConstraint(NSLayoutConstraint(item: messageLable, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 224))
         addConstraint(NSLayoutConstraint(item: messageLable, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 36))
+        
+        addConstraint(NSLayoutConstraint(item: registerButton, attribute: .left, relatedBy: .equal, toItem: messageLable, attribute: .left, multiplier: 1.0, constant: 0))
+        addConstraint(NSLayoutConstraint(item: registerButton, attribute: .top, relatedBy: .equal, toItem: messageLable, attribute: .bottom, multiplier: 1.0, constant: 16))
+        addConstraint(NSLayoutConstraint(item: registerButton, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 100))
+        addConstraint(NSLayoutConstraint(item: registerButton, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 36))
+        
+        addConstraint(NSLayoutConstraint(item: loginButton, attribute: .right, relatedBy: .equal, toItem: messageLable, attribute: .right, multiplier: 1.0, constant: 0))
+        addConstraint(NSLayoutConstraint(item: loginButton, attribute: .top, relatedBy: .equal, toItem: messageLable, attribute: .bottom, multiplier: 1.0, constant: 16))
+        addConstraint(NSLayoutConstraint(item: loginButton, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 100))
+        addConstraint(NSLayoutConstraint(item: loginButton, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 36))
+
         
     }
 }
