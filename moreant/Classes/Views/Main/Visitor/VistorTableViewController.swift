@@ -1,15 +1,19 @@
-
 //
-//  MessageTableViewController.swift
+//  VistorTableViewController.swift
 //  moreant
 //
-//  Created by admin on 2020/4/19.
+//  Created by admin on 2020/5/18.
 //  Copyright © 2020 admin. All rights reserved.
 //
 
 import UIKit
 
-class MessageTableViewController: VistorTableViewController {
+class VistorTableViewController: UITableViewController {
+    public var userLogin = false
+    
+    override func loadView() {
+        userLogin ? super.loadView() : setupVistorView()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -92,5 +96,12 @@ class MessageTableViewController: VistorTableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    public func setupVistorView()
+    {
+        view = VistorView()
+        view.backgroundColor = UIColor.orange
+        
+    }
 
 }
