@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8403A8ED2472AFBF001F2BBE /* UIBut+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8403A8EC2472AFBF001F2BBE /* UIBut+Extention.swift */; };
 		841C1715242DDF1400EE51CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841C1714242DDF1400EE51CA /* AppDelegate.swift */; };
 		841C1717242DDF1400EE51CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841C1716242DDF1400EE51CA /* ViewController.swift */; };
 		841C171A242DDF1400EE51CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 841C1718242DDF1400EE51CA /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8403A8EC2472AFBF001F2BBE /* UIBut+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBut+Extention.swift"; sourceTree = "<group>"; };
 		841C1711242DDF1400EE51CA /* moreant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = moreant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		841C1714242DDF1400EE51CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		841C1716242DDF1400EE51CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -45,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8403A8EB2472AF88001F2BBE /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8403A8EC2472AFBF001F2BBE /* UIBut+Extention.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		841C1708242DDF1400EE51CA = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +106,7 @@
 		8450C300244A14800073EB9A /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				8403A8EB2472AF88001F2BBE /* Extension */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -233,6 +244,7 @@
 			files = (
 				8450C313244CA7750073EB9A /* ProfileTableViewController.swift in Sources */,
 				8450C30B244CA6D10073EB9A /* MainViewController.swift in Sources */,
+				8403A8ED2472AFBF001F2BBE /* UIBut+Extention.swift in Sources */,
 				841C1717242DDF1400EE51CA /* ViewController.swift in Sources */,
 				8450C30D244CA7370073EB9A /* DiscoverTableViewController.swift in Sources */,
 				841C1715242DDF1400EE51CA /* AppDelegate.swift in Sources */,
