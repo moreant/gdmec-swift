@@ -10,7 +10,7 @@ import UIKit
 
 class VistorView: UIView {
     
-    public lazy var iconImageView = UIImageView(image:UIImage(named:"visitordiscover_feed_mask_smallicon"))
+    public lazy var iconImageView = UIImageView(image:UIImage(named:"visitordiscover_feed_image_smallicon"))
     
     public lazy var homeIconView:UIImageView = UIImageView(image:UIImage(named:"visitordiscover_feed_image_house"))
     
@@ -40,5 +40,10 @@ extension VistorView
     {
         addSubview(iconImageView)
         addSubview(homeIconView)
+        for v in subviews
+        {
+            v.translatesAutoresizingMaskIntoConstraints=false
+            
+        }
     }
 }
