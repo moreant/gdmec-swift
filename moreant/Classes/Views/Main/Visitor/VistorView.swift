@@ -10,7 +10,7 @@ import UIKit
 
 class VistorView: UIView {
     
-    public lazy var iconImageView = UIImageView(image:UIImage(named:"visitordiscover_feed_image_smallicon"))
+    public lazy var iconView = UIImageView(image:UIImage(named:"visitordiscover_feed_image_smallicon"))
     
     public lazy var homeIconView:UIImageView = UIImageView(image:UIImage(named:"visitordiscover_feed_image_house"))
     
@@ -38,12 +38,17 @@ extension VistorView
 {
     public func setupUI()
     {
-        addSubview(iconImageView)
+        addSubview(iconView)
         addSubview(homeIconView)
         for v in subviews
         {
             v.translatesAutoresizingMaskIntoConstraints=false
             
         }
+        addConstraint(NSLayoutConstraint(item: iconView, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1.0, constant: 0))
+        addConstraint(NSLayoutConstraint(item: iconView, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1.0, constant: -60))
+        addConstraint(NSLayoutConstraint(item: homeIconView, attribute: .centerX, relatedBy: .equal, toItem: iconView, attribute: .centerX, multiplier: 1.0, constant: 0))
+        addConstraint(NSLayoutConstraint(item: homeIconView, attribute: .centerY, relatedBy: .equal, toItem: iconView, attribute: .centerY, multiplier: 1.0, constant: 0))
+        
     }
 }
