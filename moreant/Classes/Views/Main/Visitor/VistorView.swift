@@ -14,6 +14,8 @@ class VistorView: UIView {
     
     public lazy var homeIconView:UIImageView = UIImageView(image:UIImage(named:"visitordiscover_feed_image_house"))
     
+    public lazy var maskIconView:UIImageView = UIImageView(image:UIImage(named:"visitordiscover_feed_mask_smallicon"))
+    
     public lazy var messageLable:UILabel = {
         let lable = UILabel()
         lable.text="关注一些人，回这里看看有什么惊喜"
@@ -69,6 +71,8 @@ extension VistorView
         addSubview(messageLable)
         addSubview(registerButton)
         addSubview(loginButton)
+        addSubview(maskIconView)
+        
         for v in subviews
         {
             v.translatesAutoresizingMaskIntoConstraints=false
@@ -94,6 +98,9 @@ extension VistorView
         addConstraint(NSLayoutConstraint(item: loginButton, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 100))
         addConstraint(NSLayoutConstraint(item: loginButton, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 36))
 
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[mask]-0-|", options: [], metrics: nil, views: ["mask":maskIconView]))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[mask]-(btnHeight)-[regButton]", options: [], metrics: ["btnHeight":-36], views: ["mask":maskIconView,"regButton":registerButton]))
         
+        backgroundColor=UIColor(white:237.0/255.0,alpha:1.0)
     }
 }

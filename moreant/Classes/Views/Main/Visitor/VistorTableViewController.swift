@@ -100,7 +100,7 @@ class VistorTableViewController: UITableViewController {
     public func setupVistorView()
     {
         view = VistorView()
-        view.backgroundColor = UIColor.orange
+        view.backgroundColor = UIColor.white
         
     }
 
