@@ -8,11 +8,11 @@
 
 import UIKit
 
-class DiscoverTableViewController: VistorTableViewController {
+class DiscoverTableViewController: VisitorTableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        visitorView?.setupInfo(imageName: "visitordiscover_image_message", title: "登录后，别人评论的你微博，发给你消息都会在这里收到消息")
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

@@ -18,8 +18,8 @@
 		8450C30F244CA74F0073EB9A /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450C30E244CA74F0073EB9A /* HomeTableViewController.swift */; };
 		8450C311244CA7640073EB9A /* MessageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450C310244CA7640073EB9A /* MessageTableViewController.swift */; };
 		8450C313244CA7750073EB9A /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450C312244CA7750073EB9A /* ProfileTableViewController.swift */; };
-		84C37B2D2472C1B600E30D56 /* VistorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C37B2C2472C1B600E30D56 /* VistorTableViewController.swift */; };
-		84C37B2F2472C32600E30D56 /* VistorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C37B2E2472C32600E30D56 /* VistorView.swift */; };
+		84C37B2D2472C1B600E30D56 /* VisitorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C37B2C2472C1B600E30D56 /* VisitorTableViewController.swift */; };
+		84C37B2F2472C32600E30D56 /* VisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C37B2E2472C32600E30D56 /* VisitorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,8 +36,8 @@
 		8450C30E244CA74F0073EB9A /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		8450C310244CA7640073EB9A /* MessageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewController.swift; sourceTree = "<group>"; };
 		8450C312244CA7750073EB9A /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
-		84C37B2C2472C1B600E30D56 /* VistorTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VistorTableViewController.swift; sourceTree = "<group>"; };
-		84C37B2E2472C32600E30D56 /* VistorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VistorView.swift; sourceTree = "<group>"; };
+		84C37B2C2472C1B600E30D56 /* VisitorTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitorTableViewController.swift; sourceTree = "<group>"; };
+		84C37B2E2472C32600E30D56 /* VisitorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,8 +178,8 @@
 		84C37B2B2472C16C00E30D56 /* Visitor */ = {
 			isa = PBXGroup;
 			children = (
-				84C37B2C2472C1B600E30D56 /* VistorTableViewController.swift */,
-				84C37B2E2472C32600E30D56 /* VistorView.swift */,
+				84C37B2C2472C1B600E30D56 /* VisitorTableViewController.swift */,
+				84C37B2E2472C32600E30D56 /* VisitorView.swift */,
 			);
 			path = Visitor;
 			sourceTree = "<group>";
@@ -258,12 +258,12 @@
 			files = (
 				8450C313244CA7750073EB9A /* ProfileTableViewController.swift in Sources */,
 				8450C30B244CA6D10073EB9A /* MainViewController.swift in Sources */,
-				84C37B2D2472C1B600E30D56 /* VistorTableViewController.swift in Sources */,
+				84C37B2D2472C1B600E30D56 /* VisitorTableViewController.swift in Sources */,
 				8403A8ED2472AFBF001F2BBE /* UIBut+Extention.swift in Sources */,
 				841C1717242DDF1400EE51CA /* ViewController.swift in Sources */,
 				8450C30D244CA7370073EB9A /* DiscoverTableViewController.swift in Sources */,
 				841C1715242DDF1400EE51CA /* AppDelegate.swift in Sources */,
-				84C37B2F2472C32600E30D56 /* VistorView.swift in Sources */,
+				84C37B2F2472C32600E30D56 /* VisitorView.swift in Sources */,
 				8450C311244CA7640073EB9A /* MessageTableViewController.swift in Sources */,
 				8450C30F244CA74F0073EB9A /* HomeTableViewController.swift in Sources */,
 			);

@@ -8,8 +8,9 @@
 
 import UIKit
 
-class VistorTableViewController: UITableViewController {
+class VisitorTableViewController: UITableViewController {
     public var userLogin = false
+    public var visitorView:VisitorView?
     
     override func loadView() {
         userLogin ? super.loadView() : setupVistorView()
@@ -99,7 +100,8 @@ class VistorTableViewController: UITableViewController {
     
     public func setupVistorView()
     {
-        view = VistorView()
+        visitorView = VisitorView()
+        view = visitorView
         view.backgroundColor = UIColor.white
         
     }

@@ -9,11 +9,12 @@
 
 import UIKit
 
-class MessageTableViewController: VistorTableViewController {
+class MessageTableViewController: VisitorTableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        visitorView?.setupInfo(imageName: "visitordiscover_image_message", title: "登录后，最新最热微博尽在掌握，不会再与时事擦肩而过")
+    
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

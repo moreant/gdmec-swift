@@ -8,7 +8,7 @@
 
 import UIKit
 
-class VistorView: UIView {
+class VisitorView: UIView {
     
     public lazy var iconView = UIImageView(image:UIImage(named:"visitordiscover_feed_image_smallicon"))
     
@@ -62,7 +62,7 @@ class VistorView: UIView {
 
 }
 
-extension VistorView
+extension VisitorView
 {
     public func setupUI()
     {
@@ -102,5 +102,18 @@ extension VistorView
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[mask]-(btnHeight)-[regButton]", options: [], metrics: ["btnHeight":-36], views: ["mask":maskIconView,"regButton":registerButton]))
         
         backgroundColor=UIColor(white:237.0/255.0,alpha:1.0)
+    }
+    
+    public func setupInfo(imageName:String?,title:String)
+    {
+        messageLable.text = title
+        guard let imgName = imageName else
+        {
+            return
+        }
+        homeIconView.isHidden = true
+        self.sendSubview(toBack: maskIconView)
+        iconView.image = UIImage(named:imageName!)
+        
     }
 }
