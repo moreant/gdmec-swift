@@ -49,7 +49,6 @@ class VisitorView: UIView {
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-        setupUI()
     }
     
     /*
@@ -107,13 +106,23 @@ extension VisitorView
     public func setupInfo(imageName:String?,title:String)
     {
         messageLable.text = title
-        guard let imgName = imageName else
-        {
+        if(imageName==nil){
+            startAnim()
             return
         }
         homeIconView.isHidden = true
         self.sendSubview(toBack: maskIconView)
         iconView.image = UIImage(named:imageName!)
+    }
+    
+    public func startAnim()
+    {
+        let anim = CABasicAnimation(keyPath: "transform.rotation")
+        anim.toValue = 2*Double.pi
+        anim.repeatCount = MAXFLOAT
+        anim.duration = 20
+        anim.isRemovedOnCompletion = false
         
+        iconView.layer.add(anim, forKey: nil)
     }
 }
