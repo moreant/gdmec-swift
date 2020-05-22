@@ -1,0 +1,6 @@
+framework module Pods_moreant {
+  umbrella header "Pods-moreant-umbrella.h"
+
+  export *
+  module * { export * }
+}
