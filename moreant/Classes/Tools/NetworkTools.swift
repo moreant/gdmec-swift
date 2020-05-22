@@ -21,6 +21,7 @@ class NetworkTools: AFHTTPSessionManager {
 
 extension NetworkTools
 {
+    /*
     func request(URLString:String,parameters:[String:AnyObject]?)
     {
         self.get(URLString, parameters: parameters, progress: nil, success: {(_,result) in
@@ -28,4 +29,33 @@ extension NetworkTools
             print(error)
         }
     }
+    */
+    func request(method:HMRequestMethod,URLString:String,parameters:[String:AnyObject]?,finish:@escaping (_ result:AnyObject?,_ error:Error?)->())
+    {
+        if method == .GET
+        {
+        self.get(URLString, parameters: parameters, progress: nil,
+                 success: {(_,result) in
+                    print(result!)
+        }) { (_, error) in
+            finish(nil,error)
+        }
+        }
+        
+        if method == .POST
+        {
+            self.post(URLString, parameters: parameters, progress: nil,
+                      success: {(_,result) in
+                        print(result!)
+            }) { (_, error) in
+                finish(nil,error)
+            }
+        }
+    }
+}
+
+enum HMRequestMethod:String
+{
+    case GET="GET"
+    case POST="POST"
 }
