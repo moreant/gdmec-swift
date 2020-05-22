@@ -13,6 +13,7 @@
 		841C171A242DDF1400EE51CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 841C1718242DDF1400EE51CA /* Main.storyboard */; };
 		841C171C242DDF1400EE51CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 841C171B242DDF1400EE51CA /* Assets.xcassets */; };
 		841C171F242DDF1400EE51CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 841C171D242DDF1400EE51CA /* LaunchScreen.storyboard */; };
+		844798D9247780FF00F3206B /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844798D8247780FF00F3206B /* NetworkTools.swift */; };
 		8450C30B244CA6D10073EB9A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450C30A244CA6D10073EB9A /* MainViewController.swift */; };
 		8450C30D244CA7370073EB9A /* DiscoverTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450C30C244CA7370073EB9A /* DiscoverTableViewController.swift */; };
 		8450C30F244CA74F0073EB9A /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450C30E244CA74F0073EB9A /* HomeTableViewController.swift */; };
@@ -20,6 +21,7 @@
 		8450C313244CA7750073EB9A /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450C312244CA7750073EB9A /* ProfileTableViewController.swift */; };
 		84C37B2D2472C1B600E30D56 /* VisitorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C37B2C2472C1B600E30D56 /* VisitorTableViewController.swift */; };
 		84C37B2F2472C32600E30D56 /* VisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C37B2E2472C32600E30D56 /* VisitorView.swift */; };
+		D8E1212722F168D90D6F4F6B /* Pods_moreant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91C9B15C12CCEC632609D11D /* Pods_moreant.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,7 @@
 		841C171B242DDF1400EE51CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		841C171E242DDF1400EE51CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		841C1720242DDF1400EE51CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		844798D8247780FF00F3206B /* NetworkTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
 		8450C30A244CA6D10073EB9A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8450C30C244CA7370073EB9A /* DiscoverTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverTableViewController.swift; sourceTree = "<group>"; };
 		8450C30E244CA74F0073EB9A /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +41,9 @@
 		8450C312244CA7750073EB9A /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		84C37B2C2472C1B600E30D56 /* VisitorTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitorTableViewController.swift; sourceTree = "<group>"; };
 		84C37B2E2472C32600E30D56 /* VisitorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitorView.swift; sourceTree = "<group>"; };
+		91C9B15C12CCEC632609D11D /* Pods_moreant.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_moreant.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4A0310FC18F0CCB0BCCBC12 /* Pods-moreant.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moreant.release.xcconfig"; path = "Pods/Target Support Files/Pods-moreant/Pods-moreant.release.xcconfig"; sourceTree = "<group>"; };
+		FDF33E1F53CA37EFA3149AF8 /* Pods-moreant.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moreant.debug.xcconfig"; path = "Pods/Target Support Files/Pods-moreant/Pods-moreant.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,12 +51,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8E1212722F168D90D6F4F6B /* Pods_moreant.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4EA6ED46C83B594F9CE3D745 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FDF33E1F53CA37EFA3149AF8 /* Pods-moreant.debug.xcconfig */,
+				B4A0310FC18F0CCB0BCCBC12 /* Pods-moreant.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8403A8EB2472AF88001F2BBE /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +80,8 @@
 			children = (
 				841C1713242DDF1400EE51CA /* moreant */,
 				841C1712242DDF1400EE51CA /* Products */,
+				4EA6ED46C83B594F9CE3D745 /* Pods */,
+				A5C64B6D66EF20A84597C618 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				8403A8EB2472AF88001F2BBE /* Extension */,
+				844798D8247780FF00F3206B /* NetworkTools.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -184,6 +203,14 @@
 			path = Visitor;
 			sourceTree = "<group>";
 		};
+		A5C64B6D66EF20A84597C618 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				91C9B15C12CCEC632609D11D /* Pods_moreant.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -191,9 +218,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 841C1723242DDF1400EE51CA /* Build configuration list for PBXNativeTarget "moreant" */;
 			buildPhases = (
+				0264191A24948C0DCABF1ECA /* [CP] Check Pods Manifest.lock */,
 				841C170D242DDF1400EE51CA /* Sources */,
 				841C170E242DDF1400EE51CA /* Frameworks */,
 				841C170F242DDF1400EE51CA /* Resources */,
+				F1247F2599BEE1EA64DFDEAF /* [CP] Embed Pods Frameworks */,
+				75892B1176DAFBD53E701956 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -251,12 +281,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0264191A24948C0DCABF1ECA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-moreant-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		75892B1176DAFBD53E701956 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-moreant/Pods-moreant-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F1247F2599BEE1EA64DFDEAF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-moreant/Pods-moreant-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-moreant/Pods-moreant-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		841C170D242DDF1400EE51CA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8450C313244CA7750073EB9A /* ProfileTableViewController.swift in Sources */,
+				844798D9247780FF00F3206B /* NetworkTools.swift in Sources */,
 				8450C30B244CA6D10073EB9A /* MainViewController.swift in Sources */,
 				84C37B2D2472C1B600E30D56 /* VisitorTableViewController.swift in Sources */,
 				8403A8ED2472AFBF001F2BBE /* UIBut+Extention.swift in Sources */,
@@ -400,6 +485,7 @@
 		};
 		841C1724242DDF1400EE51CA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDF33E1F53CA37EFA3149AF8 /* Pods-moreant.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
@@ -415,6 +501,7 @@
 		};
 		841C1725242DDF1400EE51CA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4A0310FC18F0CCB0BCCBC12 /* Pods-moreant.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";

@@ -15,6 +15,7 @@ class MainViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         addChildViewControllers()
+        NetworkTools.sharedTools.request(URLString: "http://www.weather.com.cn/data/sk/101010100.html", parameters: nil)
         // Do any additional setup after loading the view.
     }
 
