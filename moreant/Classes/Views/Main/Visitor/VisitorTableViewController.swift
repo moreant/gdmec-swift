@@ -104,6 +104,27 @@ class VisitorTableViewController: UITableViewController {
         view = visitorView
         view.backgroundColor = UIColor.white
         
+        visitorView?.registerButton.addTarget(self, action: #selector(VisitorTableViewController.visitorViewDidRegister), for: .touchUpInside)
+        
+        visitorView?.loginButton.addTarget(self, action: #selector(VisitorTableViewController.visitorViewDidLogin), for: .touchUpInside)
+        
     }
 
 }
+
+extension VisitorTableViewController
+{
+    @objc public func visitorViewDidRegister()
+    {
+        print("注册")
+    }
+    
+    @objc public func visitorViewDidLogin()
+    {
+        let vc = OAuthViewController()
+        let nav = UINavigationController(rootViewController: vc)
+        present(nav, animated: true, completion: nil)
+        
+    }
+}
+

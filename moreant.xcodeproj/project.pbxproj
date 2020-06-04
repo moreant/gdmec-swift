@@ -21,6 +21,7 @@
 		8450C313244CA7750073EB9A /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450C312244CA7750073EB9A /* ProfileTableViewController.swift */; };
 		84C37B2D2472C1B600E30D56 /* VisitorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C37B2C2472C1B600E30D56 /* VisitorTableViewController.swift */; };
 		84C37B2F2472C32600E30D56 /* VisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C37B2E2472C32600E30D56 /* VisitorView.swift */; };
+		84FEB21F248961E90006222E /* OAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FEB21E248961E90006222E /* OAuthViewController.swift */; };
 		D8E1212722F168D90D6F4F6B /* Pods_moreant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91C9B15C12CCEC632609D11D /* Pods_moreant.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		8450C312244CA7750073EB9A /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		84C37B2C2472C1B600E30D56 /* VisitorTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitorTableViewController.swift; sourceTree = "<group>"; };
 		84C37B2E2472C32600E30D56 /* VisitorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitorView.swift; sourceTree = "<group>"; };
+		84FEB21E248961E90006222E /* OAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthViewController.swift; sourceTree = "<group>"; };
 		91C9B15C12CCEC632609D11D /* Pods_moreant.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_moreant.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4A0310FC18F0CCB0BCCBC12 /* Pods-moreant.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moreant.release.xcconfig"; path = "Pods/Target Support Files/Pods-moreant/Pods-moreant.release.xcconfig"; sourceTree = "<group>"; };
 		FDF33E1F53CA37EFA3149AF8 /* Pods-moreant.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moreant.debug.xcconfig"; path = "Pods/Target Support Files/Pods-moreant/Pods-moreant.debug.xcconfig"; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 		8450C301244A14880073EB9A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				84FEB21D2489618D0006222E /* OAuth */,
 				8450C307244A14DC0073EB9A /* Profile */,
 				8450C306244A14CD0073EB9A /* Message */,
 				8450C305244A14C50073EB9A /* Main */,
@@ -201,6 +204,14 @@
 				84C37B2E2472C32600E30D56 /* VisitorView.swift */,
 			);
 			path = Visitor;
+			sourceTree = "<group>";
+		};
+		84FEB21D2489618D0006222E /* OAuth */ = {
+			isa = PBXGroup;
+			children = (
+				84FEB21E248961E90006222E /* OAuthViewController.swift */,
+			);
+			path = OAuth;
 			sourceTree = "<group>";
 		};
 		A5C64B6D66EF20A84597C618 /* Frameworks */ = {
@@ -344,6 +355,7 @@
 				844798D9247780FF00F3206B /* NetworkTools.swift in Sources */,
 				8450C30B244CA6D10073EB9A /* MainViewController.swift in Sources */,
 				84C37B2D2472C1B600E30D56 /* VisitorTableViewController.swift in Sources */,
+				84FEB21F248961E90006222E /* OAuthViewController.swift in Sources */,
 				8403A8ED2472AFBF001F2BBE /* UIBut+Extention.swift in Sources */,
 				841C1717242DDF1400EE51CA /* ViewController.swift in Sources */,
 				8450C30D244CA7370073EB9A /* DiscoverTableViewController.swift in Sources */,
