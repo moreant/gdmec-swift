@@ -30,6 +30,7 @@ class OAuthViewController: UIViewController {
         view = webview
         title = "登陆新浪微博"
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "关闭", style: .plain, target: self, action: #selector(OAuthViewController.close))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "自动填充", style: .plain, target: self, action: #selector(OAuthViewController.autoFill))
     }
     
 
@@ -46,6 +47,13 @@ class OAuthViewController: UIViewController {
     @objc public func close()
     {
         dismiss(animated: true, completion: nil)
+    }
+    
+    @objc public func autoFill()
+    {
+        var js = "document.getElementById('userId').value='youusername';"
+        js += "document.getElementById('passwd').value='yourpassword';"
+        webview.stringByEvaluatingJavaScript(from: js)
     }
 
 }

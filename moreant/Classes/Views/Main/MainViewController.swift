@@ -16,8 +16,8 @@ class MainViewController: UITabBarController {
         super.viewDidLoad()
         addChildViewControllers()
 //        NetworkTools.sharedTools.request(URLString: "http://www.weather.com.cn/data/sk/101010100.html", parameters: nil)
-        NetworkTools.sharedTools.request(method: .GET, URLString: "http://httpbin.org/get", parameters: ["name": "moreant" as AnyObject,"age" : 20 as AnyObject], finish: {(result,error)->() in print(result!)})
-        NetworkTools.sharedTools.request(method: .POST, URLString: "http://httpbin.org/post", parameters: ["name": "moreant" as AnyObject,"age" : 20 as AnyObject], finish: {(result,error)->() in print(result!)})
+        // NetworkTools.sharedTools.request(method: .GET, URLString: "http://httpbin.org/get", parameters: ["name": "moreant" as AnyObject,"age" : 20 as AnyObject], finish: {(result,error)->() in print(result!)})
+        // NetworkTools.sharedTools.request(method: .POST, URLString: "http://httpbin.org/post", parameters: ["name": "moreant" as AnyObject,"age" : 20 as AnyObject], finish: {(result,error)->() in print(result!)})
         // Do any additional setup after loading the view.
     }
 

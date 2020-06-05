@@ -16,7 +16,7 @@ class NetworkTools: AFHTTPSessionManager {
     public let redirectUrl = "http://www.baidu.com"
     
     var OAuthURL:NSURL{
-        let urlString = "https://api.weibo.com/oauth2/authorize?client_id=\(appKey)&redirect_uri=\(redirectUrl)"
+        let urlString = "https://api.weibo.com/oauth2/authorize?client_id=\(appKey)&redirect_uri=\(redirectUrl)&response_type=code"
         return NSURL(string:urlString)!
     }
 
