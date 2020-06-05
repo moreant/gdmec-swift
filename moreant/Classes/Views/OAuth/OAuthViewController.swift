@@ -26,14 +26,6 @@ class OAuthViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func loadView() {
-        view = webview
-        title = "登陆新浪微博"
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "关闭", style: .plain, target: self, action: #selector(OAuthViewController.close))
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "自动填充", style: .plain, target: self, action: #selector(OAuthViewController.autoFill))
-    }
-    
-
     /*
     // MARK: - Navigation
 
@@ -51,9 +43,41 @@ class OAuthViewController: UIViewController {
     
     @objc public func autoFill()
     {
-        var js = "document.getElementById('userId').value='youusername';"
-        js += "document.getElementById('passwd').value='yourpassword';"
+        var js = "document.getElementById('userId').value='17688740114';"
+        js += "document.getElementById('passwd').value='b$7L0FVF76Yh';"
         webview.stringByEvaluatingJavaScript(from: js)
     }
 
 }
+
+extension OAuthViewController:UIWebViewDelegate
+{
+    func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+        guard let url = request.url , url.host == "www.baidu.com" else
+        {
+            return true
+        }
+        guard let query = url.query,query.hasPrefix("code") else
+        {
+            print("取消授权")
+            return false
+        }
+        let code = String(query["code=".endIndex...])
+        print(code)
+        return false
+    }
+    
+    override func loadView() {
+        view = webview
+        webview.delegate = self
+        title = "登陆新浪微博"
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "关闭", style: .plain, target: self, action: #selector(OAuthViewController.close))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "自动填充", style: .plain, target: self, action: #selector(OAuthViewController.autoFill))
+    }
+
+}
+
+
+
+
+
