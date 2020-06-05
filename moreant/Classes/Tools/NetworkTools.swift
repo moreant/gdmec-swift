@@ -10,6 +10,15 @@ import UIKit
 import AFNetworking
 
 class NetworkTools: AFHTTPSessionManager {
+    
+    public let appKey = "1489607318"
+    public let appSecret = "f23b7abec4619895d362f6d44f3388ae"
+    public let redirectUrl = "http://www.baidu.com"
+    
+    var OAuthURL:NSURL{
+        let urlString = "https://api.weibo.com/oauth2/authorize?client_id=\(appKey)&redirect_uri=\(redirectUrl)"
+        return NSURL(string:urlString)!
+    }
 
     static let sharedTools:NetworkTools={
         let tools = NetworkTools(baseURL: nil)

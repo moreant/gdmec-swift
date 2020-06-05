@@ -14,17 +14,22 @@ class OAuthViewController: UIViewController {
     
 
     override func viewDidLoad() {
-        // super.viewDidLoad()
+        super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        view = webview
-        title = "登陆新浪微博"
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "关闭", style: .plain, target: self, action: #selector(OAuthViewController.close))
+        self.webview.loadRequest(URLRequest(url:NetworkTools.sharedTools.OAuthURL as URL))
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func loadView() {
+        view = webview
+        title = "登陆新浪微博"
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "关闭", style: .plain, target: self, action: #selector(OAuthViewController.close))
     }
     
 
