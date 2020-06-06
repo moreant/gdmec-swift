@@ -74,6 +74,7 @@ extension OAuthViewController:UIWebViewDelegate
             }
             let account = UserAccount(dict:result as! [String:AnyObject])
             print(account)
+            self.loadUserInfo(account: account)
         }
         return false
     }
@@ -84,6 +85,31 @@ extension OAuthViewController:UIWebViewDelegate
         title = "登陆新浪微博"
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "关闭", style: .plain, target: self, action: #selector(OAuthViewController.close))
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "自动填充", style: .plain, target: self, action: #selector(OAuthViewController.autoFill))
+    }
+    
+    func loadUserInfo(account:UserAccount)
+    {
+        NetworkTools.sharedTools.loadUserInfo(uid: account.uid!, accessToken: account.access_token!){
+            (result,error)->Void in
+            if error != nil
+            {
+                print("loadUserInfo: ")
+                print(error as Any)
+                return
+            }
+            guard let dict = result as? [String:AnyObject] else
+            {
+                print("格式错误")
+                return
+            }
+            print(dict["screen_name"] as Any)
+            print(dict["avatar_large"] as Any)
+            
+            account.screen_name = dict["screen_name"] as! String?
+            account.avatar_large = dict["avatar_large"] as! String?
+            
+            print(account)
+        }
     }
 
 }
