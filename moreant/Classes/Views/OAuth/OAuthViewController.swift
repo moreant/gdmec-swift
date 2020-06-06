@@ -72,7 +72,8 @@ extension OAuthViewController:UIWebViewDelegate
                 print(error as Any)
                 return
             }
-            print(result as Any)
+            let account = UserAccount(dict:result as! [String:AnyObject])
+            print(account)
         }
         return false
     }

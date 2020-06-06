@@ -42,26 +42,26 @@ extension NetworkTools
         }
     }
     */
-    func request(method:HMRequestMethod,URLString:String,parameters:[String:AnyObject]?,finish:@escaping (_ result:AnyObject?,_ error:Error?)->())
+    func request(method:HMRequestMethod,URLString:String,parameters:[String:AnyObject]?,finished:@escaping HMRequestCallBack)
     {
+        
+        let success = {(task:URLSessionDataTask?,result:Any?)->Void in
+            finished(result as AnyObject,nil)
+        }
+        let failure = {(task:URLSessionDataTask?,error:Error)->Void in
+            finished(nil,error)
+        }
+        
         if method == .GET
         {
         self.get(URLString, parameters: parameters, progress: nil,
-                 success: {(_,result) in
-                    print(result!)
-        }) { (_, error) in
-            finish(nil,error)
-        }
+                 success: success,failure:failure)
         }
         
         if method == .POST
         {
             self.post(URLString, parameters: parameters, progress: nil,
-                      success: {(_,result) in
-                        print(result!)
-            }) { (_, error) in
-                finish(nil,error)
-            }
+                 success: success,failure:failure)
         }
     }
     
@@ -75,7 +75,7 @@ extension NetworkTools
             "code" : code ,
             "redirect_uri" : redirectUrl
         ]
-        request(method: .POST, URLString: urlString, parameters: params as [String : AnyObject], finish: finished)
+        request(method: .POST, URLString: urlString, parameters: params as [String : AnyObject], finished: finished)
     }
     
 }
