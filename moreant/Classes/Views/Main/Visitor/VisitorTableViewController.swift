@@ -109,7 +109,7 @@ class VisitorTableViewController: UITableViewController {
         visitorView?.loginButton.addTarget(self, action: #selector(VisitorTableViewController.visitorViewDidLogin), for: .touchUpInside)
         
     }
-
+    
 }
 
 extension VisitorTableViewController

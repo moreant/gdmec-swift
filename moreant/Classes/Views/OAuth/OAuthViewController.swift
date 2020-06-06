@@ -64,6 +64,16 @@ extension OAuthViewController:UIWebViewDelegate
         }
         let code = String(query["code=".endIndex...])
         print(code)
+        NetworkTools.sharedTools.loadAccessToken(code: code){
+            (result,error)->() in
+            if error != nil
+            {
+                print("错误")
+                print(error as Any)
+                return
+            }
+            print(result as Any)
+        }
         return false
     }
     
