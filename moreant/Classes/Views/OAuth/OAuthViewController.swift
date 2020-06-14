@@ -64,7 +64,7 @@ extension OAuthViewController:UIWebViewDelegate
         }
         let code = String(query["code=".endIndex...])
         print(code)
-        NetworkTools.sharedTools.loadAccessToken(code: code){
+        /*NetworkTools.sharedTools.loadAccessToken(code: code){
             (result,error)->() in
             if error != nil
             {
@@ -75,6 +75,16 @@ extension OAuthViewController:UIWebViewDelegate
             let account = UserAccount(dict:result as! [String:AnyObject])
             print(account)
             self.loadUserInfo(account: account)
+        }*/
+        UserAccountViewModel.shareUserAccount.loadAccessToken(code: code){
+            (isSuccessed)->() in
+            if isSuccessed == true
+            {
+                print("ok")
+                print(UserAccountViewModel.shareUserAccount.account as Any)
+            }else{
+                print("失败")
+            }
         }
         return false
     }
@@ -87,7 +97,7 @@ extension OAuthViewController:UIWebViewDelegate
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "自动填充", style: .plain, target: self, action: #selector(OAuthViewController.autoFill))
     }
     
-    func loadUserInfo(account:UserAccount)
+    /*func loadUserInfo(account:UserAccount)
     {
         NetworkTools.sharedTools.loadUserInfo(uid: account.uid!, accessToken: account.access_token!){
             (result,error)->Void in
@@ -110,7 +120,7 @@ extension OAuthViewController:UIWebViewDelegate
             
             print(account)
         }
-    }
+    }*/
 
 }
 
