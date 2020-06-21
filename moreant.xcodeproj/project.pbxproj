@@ -21,6 +21,7 @@
 		8450C313244CA7750073EB9A /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450C312244CA7750073EB9A /* ProfileTableViewController.swift */; };
 		84B2A8BE248BCD86000DF6CA /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B2A8BD248BCD86000DF6CA /* UserAccount.swift */; };
 		84B2A8C024968521000DF6CA /* UserAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B2A8BF24968520000DF6CA /* UserAccountViewModel.swift */; };
+		84B2A8C3249FBED2000DF6CA /* NewFeatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B2A8C2249FBED2000DF6CA /* NewFeatureViewController.swift */; };
 		84C37B2D2472C1B600E30D56 /* VisitorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C37B2C2472C1B600E30D56 /* VisitorTableViewController.swift */; };
 		84C37B2F2472C32600E30D56 /* VisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C37B2E2472C32600E30D56 /* VisitorView.swift */; };
 		84FEB21F248961E90006222E /* OAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FEB21E248961E90006222E /* OAuthViewController.swift */; };
@@ -44,6 +45,7 @@
 		8450C312244CA7750073EB9A /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		84B2A8BD248BCD86000DF6CA /* UserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccount.swift; sourceTree = "<group>"; };
 		84B2A8BF24968520000DF6CA /* UserAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountViewModel.swift; sourceTree = "<group>"; };
+		84B2A8C2249FBED2000DF6CA /* NewFeatureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFeatureViewController.swift; sourceTree = "<group>"; };
 		84C37B2C2472C1B600E30D56 /* VisitorTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitorTableViewController.swift; sourceTree = "<group>"; };
 		84C37B2E2472C32600E30D56 /* VisitorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitorView.swift; sourceTree = "<group>"; };
 		84FEB21E248961E90006222E /* OAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthViewController.swift; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 		8450C305244A14C50073EB9A /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				84B2A8C1249FBE12000DF6CA /* NewFeature */,
 				84C37B2B2472C16C00E30D56 /* Visitor */,
 				8450C30A244CA6D10073EB9A /* MainViewController.swift */,
 			);
@@ -201,6 +204,14 @@
 				8450C312244CA7750073EB9A /* ProfileTableViewController.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		84B2A8C1249FBE12000DF6CA /* NewFeature */ = {
+			isa = PBXGroup;
+			children = (
+				84B2A8C2249FBED2000DF6CA /* NewFeatureViewController.swift */,
+			);
+			path = NewFeature;
 			sourceTree = "<group>";
 		};
 		84C37B2B2472C16C00E30D56 /* Visitor */ = {
@@ -370,6 +381,7 @@
 				841C1715242DDF1400EE51CA /* AppDelegate.swift in Sources */,
 				84C37B2F2472C32600E30D56 /* VisitorView.swift in Sources */,
 				8450C311244CA7640073EB9A /* MessageTableViewController.swift in Sources */,
+				84B2A8C3249FBED2000DF6CA /* NewFeatureViewController.swift in Sources */,
 				8450C30F244CA74F0073EB9A /* HomeTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
