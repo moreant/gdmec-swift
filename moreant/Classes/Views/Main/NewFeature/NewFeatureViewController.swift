@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SnapKit
 
 private let reuseIdentifier = "Cell"
 
@@ -84,6 +85,16 @@ class NewFeatureViewController: UICollectionViewController {
     
         return cell
     }
+    
+    override func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let page = Int(scrollView.contentOffset.x/scrollView.bounds.width)
+        if page != WBNewFeatureImageCount - 1
+        {
+            return
+        }
+        let cell = collectionView?.cellForItem(at: IndexPath(item:page,section:0)) as! NewFeatureCell
+        cell.showButtonAnim()
+    }
 
     // MARK: UICollectionViewDelegate
 
@@ -121,6 +132,7 @@ class NewFeatureViewController: UICollectionViewController {
 class NewFeatureCell:UICollectionViewCell
 {
     public lazy var iconView:UIImageView = UIImageView()
+    public lazy var startButton:UIButton = UIButton(title:"开始体验",color:UIColor.white,imageName:"new_feature_finish_button")
     
     override init(frame: CGRect) {
         super.init(frame:frame)
@@ -134,7 +146,17 @@ class NewFeatureCell:UICollectionViewCell
     public func setupUI()
     {
         addSubview(iconView)
+        addSubview(startButton)
         iconView.frame = bounds
+        
+        startButton.snp.makeConstraints{
+            (make)->Void
+            in
+            make.centerX.equalTo(self.snp.centerX)
+            make.bottom.equalTo(self.snp.bottom).multipliedBy(0.7)
+        }
+        startButton.addTarget(self, action: #selector(NewFeatureCell.clickStartButton), for: .touchUpInside)
+        startButton.isHidden = true
     }
     
     public var imageIndex:Int = 0
@@ -142,6 +164,20 @@ class NewFeatureCell:UICollectionViewCell
         didSet{
             iconView.image = UIImage(named:"new_feature_\(imageIndex+1)")
         }
+    }
+    
+    public func showButtonAnim()
+    {
+        startButton.isHidden = false
+        startButton.transform = CGAffineTransform(scaleX: 0, y: 0)
+        startButton.isUserInteractionEnabled = false
+        UIView.animate(withDuration: 1.6, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 10, options: [], animations: {()->Void in self.startButton.transform = CGAffineTransform.identity}){(_)->Void in self.startButton.isUserInteractionEnabled = true}
+    }
+    
+    @objc
+    public func clickStartButton()
+    {
+        print("开始体验")
     }
     
 }
