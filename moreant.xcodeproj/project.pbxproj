@@ -22,6 +22,9 @@
 		84B2A8BE248BCD86000DF6CA /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B2A8BD248BCD86000DF6CA /* UserAccount.swift */; };
 		84B2A8C024968521000DF6CA /* UserAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B2A8BF24968520000DF6CA /* UserAccountViewModel.swift */; };
 		84B2A8C3249FBED2000DF6CA /* NewFeatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B2A8C2249FBED2000DF6CA /* NewFeatureViewController.swift */; };
+		84B2A8C524A763BC000DF6CA /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B2A8C424A763BC000DF6CA /* WelcomeViewController.swift */; };
+		84B2A8C724A76598000DF6CA /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B2A8C624A76598000DF6CA /* UIImageView+Extension.swift */; };
+		84B2A8C924A768D2000DF6CA /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B2A8C824A768D2000DF6CA /* UILabel+Extension.swift */; };
 		84C37B2D2472C1B600E30D56 /* VisitorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C37B2C2472C1B600E30D56 /* VisitorTableViewController.swift */; };
 		84C37B2F2472C32600E30D56 /* VisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C37B2E2472C32600E30D56 /* VisitorView.swift */; };
 		84FEB21F248961E90006222E /* OAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FEB21E248961E90006222E /* OAuthViewController.swift */; };
@@ -46,6 +49,9 @@
 		84B2A8BD248BCD86000DF6CA /* UserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccount.swift; sourceTree = "<group>"; };
 		84B2A8BF24968520000DF6CA /* UserAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountViewModel.swift; sourceTree = "<group>"; };
 		84B2A8C2249FBED2000DF6CA /* NewFeatureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFeatureViewController.swift; sourceTree = "<group>"; };
+		84B2A8C424A763BC000DF6CA /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		84B2A8C624A76598000DF6CA /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		84B2A8C824A768D2000DF6CA /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		84C37B2C2472C1B600E30D56 /* VisitorTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitorTableViewController.swift; sourceTree = "<group>"; };
 		84C37B2E2472C32600E30D56 /* VisitorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitorView.swift; sourceTree = "<group>"; };
 		84FEB21E248961E90006222E /* OAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +85,8 @@
 			isa = PBXGroup;
 			children = (
 				8403A8EC2472AFBF001F2BBE /* UIBut+Extention.swift */,
+				84B2A8C624A76598000DF6CA /* UIImageView+Extension.swift */,
+				84B2A8C824A768D2000DF6CA /* UILabel+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -210,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				84B2A8C2249FBED2000DF6CA /* NewFeatureViewController.swift */,
+				84B2A8C424A763BC000DF6CA /* WelcomeViewController.swift */,
 			);
 			path = NewFeature;
 			sourceTree = "<group>";
@@ -371,12 +380,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				8450C313244CA7750073EB9A /* ProfileTableViewController.swift in Sources */,
+				84B2A8C524A763BC000DF6CA /* WelcomeViewController.swift in Sources */,
 				844798D9247780FF00F3206B /* NetworkTools.swift in Sources */,
 				8450C30B244CA6D10073EB9A /* MainViewController.swift in Sources */,
 				84C37B2D2472C1B600E30D56 /* VisitorTableViewController.swift in Sources */,
 				84FEB21F248961E90006222E /* OAuthViewController.swift in Sources */,
 				84B2A8BE248BCD86000DF6CA /* UserAccount.swift in Sources */,
 				8403A8ED2472AFBF001F2BBE /* UIBut+Extention.swift in Sources */,
+				84B2A8C924A768D2000DF6CA /* UILabel+Extension.swift in Sources */,
 				84B2A8C024968521000DF6CA /* UserAccountViewModel.swift in Sources */,
 				841C1717242DDF1400EE51CA /* ViewController.swift in Sources */,
 				8450C30D244CA7370073EB9A /* DiscoverTableViewController.swift in Sources */,
@@ -384,6 +395,7 @@
 				84C37B2F2472C32600E30D56 /* VisitorView.swift in Sources */,
 				8450C311244CA7640073EB9A /* MessageTableViewController.swift in Sources */,
 				84B2A8C3249FBED2000DF6CA /* NewFeatureViewController.swift in Sources */,
+				84B2A8C724A76598000DF6CA /* UIImageView+Extension.swift in Sources */,
 				8450C30F244CA74F0073EB9A /* HomeTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
