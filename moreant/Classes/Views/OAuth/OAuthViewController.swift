@@ -41,10 +41,11 @@ class OAuthViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    // 账号密码换成自己的
     @objc public func autoFill()
     {
-        var js = "document.getElementById('userId').value='17688740114';"
-        js += "document.getElementById('passwd').value='b$7L0FVF76Yh';"
+        var js = "document.getElementById('userId').value='你的账号';"
+        js += "document.getElementById('passwd').value='你的密码';"
         webview.stringByEvaluatingJavaScript(from: js)
     }
 

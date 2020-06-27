@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class WelcomeViewController: UIViewController {
     
@@ -28,13 +29,28 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        iconView.sd_setImage(with: UserAccountViewModel.shareUserAccount.avatarURL as URL, placeholderImage: UIImage(named:"avatar_default_big"))
         // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        iconView.snp.makeConstraints{
+            (make) in
+            make.bottom.equalTo(view.snp.bottom).offset(-view.bounds.height+200)
+        }
+        welcomelabel.alpha = 0
+        UIView.animate(withDuration: 1.2, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 10, options: [], animations: {()-> () in self.view.layoutIfNeeded()}){
+            (_) in
+            UIView.animate(withDuration: 0.8, animations: {self.welcomelabel.alpha = 1}){
+                (_) in
+            }
+        }
     }
     
 

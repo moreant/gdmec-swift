@@ -11,6 +11,9 @@ import Foundation
 class UserAccountViewModel
 {
     var account:UserAccount?
+    var avatarURL:NSURL{
+        return NSURL(string:account?.avatar_large ?? "")!
+    }
     public var accountPath:String
     {
         let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).last!

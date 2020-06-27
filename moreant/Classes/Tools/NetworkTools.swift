@@ -11,8 +11,9 @@ import AFNetworking
 
 class NetworkTools: AFHTTPSessionManager {
     
-    public let appKey = "1489607318"
-    public let appSecret = "f23b7abec4619895d362f6d44f3388ae"
+    // 换成自己的
+    public let appKey = "你的key"
+    public let appSecret = "你的secret"
     public let redirectUrl = "http://www.baidu.com"
     
     typealias HMRequestCallBack = (AnyObject?,Error?)->Void
